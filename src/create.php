@@ -47,8 +47,7 @@ function validate($review)
         $errors['status'] = '読書状況を選択してください';
     }
 
-    $score = (int) $review['score'];
-    if ($score < 1 || 5 < $score) {
+    if ($review['score'] < 1 || 5 < $review['score']) {
         $errors['score'] = '評価は1以上5以下の整数で入力してください';
     }
 
