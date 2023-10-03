@@ -21,11 +21,9 @@ function createReview($link, $review)
     EOT;
 
     $result = mysqli_query($link, $sql);
-    if ($result) {
-        echo '登録が完了しました' . PHP_EOL;
-    } else {
-        echo 'Error: 登録に失敗しました' . PHP_EOL;
-        echo 'Debugging Error:' . mysqli_error($link) . PHP_EOL;
+    if (!$result) {
+        error_log('Error: fail to create review');
+        error_log('Debuuging Error: ' . mysqli_error($link));
     }
 }
 
