@@ -61,15 +61,10 @@ function validate($review)
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $status = '';
-    if (array_key_exists('status', $_POST)) {
-        $status = $_POST['status'];
-    }
-
     $review = [
         'title' => $_POST['title'],
         'author' => $_POST['author'],
-        'status' => $status,
+        'status' => $_POST['status'],
         'score' => $_POST['score'],
         'summary' => $_POST['summary']
     ];
