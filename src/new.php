@@ -11,7 +11,7 @@
 
 <body>
     <h1>読書ログの登録</h1>
-    <form>
+    <form action="create.php" method="post">
         <div>
             <label for="title">書籍名</label>
             <input type="text" name="title" id="title">
@@ -24,15 +24,15 @@
             <label for="status">読書状況</label>
             <div>
                 <div>
-                    <input type="radio" name="status" id="unread" value="unread">
+                    <input type="radio" name="status" id="unread" value="未読">
                     <label for="unread">未読</label>
                 </div>
                 <div>
-                    <input type="radio" name="status" id="current" value="current">
+                    <input type="radio" name="status" id="current" value="読書中">
                     <label for="current">読書中</label>
                 </div>
                 <div>
-                    <input type="radio" name="status" id="complete" value="complete">
+                    <input type="radio" name="status" id="complete" value="読了">
                     <label for="complete">読了</label>
                 </div>
             </div>
