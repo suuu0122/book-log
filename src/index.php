@@ -10,8 +10,8 @@ function listReviews($link)
     $sql = <<<EOT
     SELECT id, title, author, status, score, summary FROM reviews
     EOT;
-    $results = mysqli_query($link, $sql);
 
+    $results = mysqli_query($link, $sql);
     if ($results) {
         while ($review = mysqli_fetch_assoc($results)) {
             $reviews[] = $review;
