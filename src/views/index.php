@@ -3,9 +3,9 @@
     <?php if (count($reviews) > 0) : ?>
         <?php foreach ($reviews as $review) : ?>
             <section class="p-4">
-                <h3><?php echo $review['title']; ?></h3>
-                <div>著者名: <?php echo $review['author']; ?> 読書状況: <?php echo $review['status']; ?>  評価: <?php echo $review['score']; ?></div>
-                <div><?php echo $review['summary']; ?></div>
+                <h3><?php echo escape($review['title']); ?></h3>
+                <div>著者名: <?php echo escape($review['author']); ?> 読書状況: <?php echo escape($review['status']); ?>  評価: <?php echo escape($review['score']); ?></div>
+                <div><?php echo escape($review['summary']); ?></div>
             </section>
         <?php endforeach; ?>
     <?php else : ?>
