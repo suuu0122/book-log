@@ -16,7 +16,7 @@ function updateReview($link, $review)
 
     $result = mysqli_query($link, $sql);
     if (!$result) {
-        error_log('Error: fail to create review');
+        error_log('Error: fail to update review');
         error_log('Debuuging Error: ' . mysqli_error($link));
     }
 }
