@@ -12,11 +12,12 @@ function listReviews($link)
     EOT;
     $results = mysqli_query($link, $sql);
 
-    while ($review = mysqli_fetch_assoc($results)) {
-        $reviews[] = $review;
+    if ($results) {
+        while ($review = mysqli_fetch_assoc($results)) {
+            $reviews[] = $review;
+        }
+        mysqli_free_result($results);
     }
-
-    mysqli_free_result($results);
 
     return $reviews;
 }
