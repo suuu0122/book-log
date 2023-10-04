@@ -8,7 +8,7 @@ function listReviews($link)
     $reviews = [];
 
     $sql = <<<EOT
-    SELECT title, author, status, score, summary FROM reviews
+    SELECT id, title, author, status, score, summary FROM reviews
     EOT;
     $results = mysqli_query($link, $sql);
 

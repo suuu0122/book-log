@@ -5,8 +5,18 @@
             <div class="card shadow-sm mb-4">
                 <div class="card-body">
                     <h3 class="card-title"><?php echo escape($review['title']); ?></h3>
-                    <p class="cart-text">著者名: <?php echo escape($review['author']); ?> 読書状況: <?php echo escape($review['status']); ?>  評価: <?php echo escape($review['score']); ?></p>
+                    <p class="cart-text pt-4">著者名: <?php echo escape($review['author']); ?> 読書状況: <?php echo escape($review['status']); ?>  評価: <?php echo escape($review['score']); ?></p>
                     <div><?php echo escape($review['summary']); ?></div>
+                </div>
+                <div class="d-flex p-2">
+                    <form class="m-2" method="post" action="detail.php">
+                        <input type="hidden" name="id" value="<?php echo $review['id']; ?>">
+                        <button class="btn btn-success">編集する</button>
+                    </form>
+                    <form class="m-2" method="post" action="">
+                        <input type="hidden" name="id" value="<?php echo $review['id']; ?>">
+                        <button class="btn btn-success">削除する</button>
+                    </form>
                 </div>
             </div>
         <?php endforeach; ?>
