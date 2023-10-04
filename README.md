@@ -9,4 +9,5 @@ CRUD機能を備えた読書ログアプリケーションです。
     ```zsh
     docker-compose build
     docker-compose up -d
+    docker-compose exec app php databases/initialize_reviews_table.php 
     ```
