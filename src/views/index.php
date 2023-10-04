@@ -13,7 +13,7 @@
                         <input type="hidden" name="id" value="<?php echo $review['id']; ?>">
                         <button class="btn btn-success">編集する</button>
                     </form>
-                    <form class="m-2" method="post" action="">
+                    <form class="m-2" method="post" action="delete.php">
                         <input type="hidden" name="id" value="<?php echo $review['id']; ?>">
                         <button class="btn btn-success">削除する</button>
                     </form>
